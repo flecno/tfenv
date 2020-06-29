@@ -135,7 +135,7 @@ function log() {
   # Standard Output (Pretty)
   case "${level}" in
     'info'|'warn')
-      echo -e "${std_line}";
+      echo -e "${std_line}" >&2;
       ;;
     'debug')
       if [ "${debug_level}" -gt 0 ]; then
